@@ -1,0 +1,26 @@
+:root {
+  --yt-spec-text-primary: rgb(255, 255, 255) !important;
+  /* header */
+  --yt-spec-base-background: rgba(0, 0, 0) !important;
+  --yt-spec-menu-background: linear-gradient(0.40turn, rgba(0, 0, 0, 0.850) 60%, rgba(40, 0, 0, 0.85)) !important;
+  --yt-spec-raised-background: linear-gradient(0.120turn, rgba(0, 0, 0, 0.750) 70%, rgba(40, 0, 0, 0.785)) !important;
+}
+
+ytd-offline-promo-renderer[darker-dark-theme][dialog][dialog][dialog],
+tp-yt-paper-dialog[modern] {
+  backdrop-filter: blur(10px);
+}
+
+html[darker-dark-theme][dark], [darker-dark-theme] [dark],
+ytd-feed-filter-chip-bar-renderer[darker-dark-theme] #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+  background-color: rgba(0, 0, 0, 0.785) !important;
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar{
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}

@@ -1,0 +1,31 @@
+{
+  "version": "1",
+  "manifest_version": 3,
+  "name": "youtubeRework",
+  "description": "rework graphics de youtube",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "image/icon128.png",
+    "48": "image/icon48.png"
+  },
+  "host_permissions": [
+    "*://www.google.com/*"
+  ],
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "css": [
+        "css/youtube.css"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ]
+}
