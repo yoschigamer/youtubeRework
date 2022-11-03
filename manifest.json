@@ -1,17 +1,22 @@
 {
-  "version": "1",
+  "version": "69",
   "manifest_version": 3,
-  "name": "youtubeRework",
-  "description": "rework graphics de youtube",
+  "name": "hum",
+  "description": "hummmmmm",
   "action": {
     "default_popup": "popup.html"
   },
+  "offline_enabled": true,
   "icons": {
     "128": "image/icon128.png",
     "48": "image/icon48.png"
   },
+  "background": {
+    "service_worker": "./js/index.js"
+  },
   "host_permissions": [
-    "*://www.google.com/*"
+    "https://*/*",
+    "http://*/*"
   ],
   "permissions": [
     "scripting",
@@ -20,7 +25,7 @@
   "content_scripts": [
     {
       "css": [
-        "css/youtube.css"
+        "css/main.css"
       ],
       "matches": [
         "https://*/*",
