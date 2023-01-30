@@ -5,6 +5,10 @@
   --yt-spec-raised-background: #06060694 !important;
 }
 
+yt-dropdown-menu[modern-dialogs] #menu.yt-dropdown-menu{
+  background-color: transparent !important;
+}
+
 ytd-offline-promo-renderer[darker-dark-theme][dialog][dialog][dialog],
 tp-yt-paper-dialog[modern] {
   backdrop-filter: blur(10px);
@@ -33,7 +37,7 @@ ytd-app:not([use-content-visibility]) #page-manager.ytd-app {
   margin-top: 0px;
 }
 
-ytd-watch-flexy[flexy] #columns.ytd-watch-flexy
+ytd-watch-flexy[flexy] #columns.ytd-watch-flexy,ytd-browse[page-subtype=playlist][amsterdam],ytd-page-manager>*.ytd-page-manager
 {
   margin-top: 50px;
 }
@@ -41,6 +45,7 @@ ytd-watch-flexy[flexy] #columns.ytd-watch-flexy
 #contentWrapper.tp-yt-iron-dropdown > *
 {
   background-color: #5c5f5f6b;
+  backdrop-filter: blur(10px);
 }
 
 ytd-subscription-notification-toggle-button-renderer-next.style-scope.ytd-subscribe-button-renderer>yt-button-shape
@@ -49,11 +54,17 @@ ytd-subscription-notification-toggle-button-renderer-next.style-scope.ytd-subscr
   margin: 0;
 }
 
-ytd-menu-popup-renderer[sheets-refresh] tp-yt-paper-listbox.ytd-menu-popup-renderer,tp-yt-paper-icon-item[style-target=host], tp-yt-paper-item[style-target=host]
-
+ytd-menu-popup-renderer[sheets-refresh] tp-yt-paper-listbox.ytd-menu-popup-renderer,tp-yt-paper-icon-item[style-target=host],
+tp-yt-paper-item[style-target=host],
+yt-dropdown-menu[modern-dialogs] #menu.yt-dropdown-menu
 {
 padding: 0;
 margin: 0;
+}
+
+a.yt-simple-endpoint.yt-dropdown-menu>*
+{
+  padding-left: 15px;
 }
 
 ytd-watch-metadata[flex-menu-enabled] #actions.ytd-watch-metadata ytd-menu-renderer.ytd-watch-metadata>yt-button-shape{
