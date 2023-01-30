@@ -37,7 +37,7 @@ ytd-app:not([use-content-visibility]) #page-manager.ytd-app {
   margin-top: 0px;
 }
 
-ytd-watch-flexy[flexy] #columns.ytd-watch-flexy,ytd-browse[page-subtype=playlist][amsterdam],ytd-page-manager>*.ytd-page-manager
+ytd-browse[page-subtype=playlist][amsterdam],ytd-page-manager>*.ytd-page-manager
 {
   margin-top: 50px;
 }
