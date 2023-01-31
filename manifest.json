@@ -22,6 +22,9 @@
       "css": [
         "css/youtube.css"
       ],
+      "js": [
+        "js/youtube.js"
+      ],
       "matches": [
         "https://*/*",
         "http://*/*"
