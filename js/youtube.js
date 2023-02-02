@@ -17,3 +17,41 @@ window.setInterval(function()
     }
     oldTitle = element.title;
 }, 100); //check every 100ms
+
+//
+
+document.body.onload = Slider;
+
+function Slider() {
+    const currentDiv = document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-progress-bar-container > div.ytp-progress-bar > div.ytp-scrubber-container")
+    const img = "https://cdn.discordapp.com/attachments/779691718160941076/845583088904962058/akbKSb4.gif"
+
+    // create a new div element
+    const newDiv = document.createElement("div");
+    newDiv.id = "img-container";
+
+    styled()
+
+    // add the text node to the newly created div
+    currentDiv.appendChild(newDiv);
+
+    // apply StyleSheet
+    function styled() {
+        var newDivStyle = document.createElement('style');
+        newDivStyle.innerHTML = `
+        :root{
+            --size: 50px !important
+        }
+
+        #img-container {
+            background: url("${img}") 0% 0% / contain no-repeat;
+            top: calc(var(--size)*-1) !important;
+            left: calc(var(--size)/2*-1) !important;
+            width: var(--size);
+            height: var(--size); 
+            position: relative;
+        }   
+        `;
+        document.head.appendChild(newDivStyle);
+    }
+}
