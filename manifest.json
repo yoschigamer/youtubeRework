@@ -11,8 +11,11 @@
     "48": "image/icon48.png"
   },
   "host_permissions": [
-    "*://www.google.com/*"
+    "<all_urls>"
   ],
+  "background": {
+    "service_worker": "./js/background.js"
+  },
   "permissions": [
     "scripting",
     "tabs"
@@ -22,12 +25,8 @@
       "css": [
         "css/youtube.css"
       ],
-      "js": [
-        "js/youtube.js"
-      ],
       "matches": [
-        "https://*/*",
-        "http://*/*"
+        "https://www.youtube.com/*"
       ]
     }
   ]
