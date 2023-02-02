@@ -13,7 +13,7 @@ A -- Run Always in Background --> B --> D
 A -- Open extension --> B_isOpen --> C_isOpen --> D
 ```
 
-#possibilities
+# Possibilities
 
 ```mermaid
 graph 
