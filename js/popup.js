@@ -68,9 +68,8 @@ console.log("popup.js loaded");
 document.getElementById("sliderButton").addEventListener("click", () => {
     if (document.getElementById("SliderChangerValue").value != "") {
         localStorage.setItem('MyKey', document.getElementById("SliderChangerValue").value);
-        chrome.runtime.sendMessage(document.getElementById("SliderChangerValue").value)  
-        console.log('send');      
-    }else {
+        chrome.runtime.sendMessage(document.getElementById("SliderChangerValue").value)
+    } else {
         alert("Remplisser le champs")
     }
 });
