@@ -1,9 +1,14 @@
-# Pimpe your Youtube!
- From this :
- 
-![enter image description here](https://zupimages.net/up/23/05/tmbq.png)
-To this :
+# Oraganization
 
-![enter image description here](https://zupimages.net/up/23/05/bctx.png)
+```mermaid
+graph 
+A{manifest.json}
+B[Background.js]
+D(CurrentTabs)
 
-Not Endded
+B_isOpen{index.html}
+C_isOpen[foreground.js]
+
+A -- Run Always in Background --> B --> D
+A -- Open extension --> B_isOpen --> C_isOpen --> D
+```
