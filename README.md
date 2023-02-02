@@ -33,5 +33,6 @@ C_isOpen[foreground.js]
 
 A -- injecting JSS --> B'' --> D
 A -- injecting css --> B' --> D
-A -- Run Always in Background --> B -- can inject Script --> D A -- Open extension --> B_isOpen --> C_isOpen -- can send Value --> B
+A -- Run Always in Background --> B -- can inject Script --> D 
+A -- Open extension --> B_isOpen --> C_isOpen -- can send Value --> B
 ```
