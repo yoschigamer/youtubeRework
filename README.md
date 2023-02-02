@@ -9,8 +9,8 @@ D(CurrentTabs)
 B_isOpen{index.html}
 C_isOpen[foreground.js]
 
-A -- Run Always in Background --> B --> D
-A -- Open extension --> B_isOpen --> C_isOpen --> D
+A -- Run Always in Background --> B -- can inject Script --> D
+A -- Open extension --> B_isOpen --> C_isOpen -- can send Value --> B
 ```
 
 # Possibilities
