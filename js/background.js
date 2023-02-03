@@ -79,14 +79,15 @@ function SliderFunction(value) {
           `;
     document.head.appendChild(newDivStyle);
   } // StyleSheet
+  if (!(document.querySelector("#img-container") != null)) {
+    const currentDiv = document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-progress-bar-container > div.ytp-progress-bar > div.ytp-scrubber-container")
+    // create a new div element
+    const newDiv = document.createElement("div");
+    newDiv.id = "img-container";
 
-  const currentDiv = document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-progress-bar-container > div.ytp-progress-bar > div.ytp-scrubber-container")
-  // create a new div element
-  const newDiv = document.createElement("div");
-  newDiv.id = "img-container";
+    styled() // Css du slider
 
-  styled() // Css du slider
-
-  // Create a new div
-  currentDiv.appendChild(newDiv);
+    // Create a new div
+    currentDiv.appendChild(newDiv);
+  }
 }
