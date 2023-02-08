@@ -99,5 +99,6 @@ function SliderFunction(InputValude) {
 }
 
 function progressBar(ProgressBarColor) {
+    let color = ProgressBarColor
   document.querySelector(':root').style.setProperty('--Progress-Bar-Color', ProgressBarColor);
 }
