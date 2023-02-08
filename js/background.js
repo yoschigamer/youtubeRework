@@ -1,8 +1,15 @@
-let value = "https://media.tenor.com/WtDDOBNCKB8AAAAi/sonic-running.gif"; // Défault Slider
+var Data = {
+  InputValude: "Vide", // https://media.tenor.com/WtDDOBNCKB8AAAAi/sonic-running.gif
+  ProgressBarColor: "vide" // red
+}
 
 chrome.runtime.onMessage.addListener(function (response, sender, sendResponse) {
-  value = response
-  return value;
+  Data = {
+    InputValude: response.temp1,
+    ProgressBarColor: response.temp2
+  }
+  console.log(response);
+  return Data
 }) // On reçois le slider définis dans la popup
 
 chrome.tabs.onUpdated.addListener(async (tabId, info) => {
@@ -17,7 +24,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, info) => {
           tabId: result[0].id
         },
         func: SliderFunction,
-        args: [value]
+        args: [Data.InputValude]
       }
     ).then(() => { console.log('script SliderFunction injected') });
     chrome.scripting.executeScript(
@@ -28,6 +35,15 @@ chrome.tabs.onUpdated.addListener(async (tabId, info) => {
         func: fullscreen,
       }
     ).then(() => { console.log('script fullscreen injected') });
+    chrome.scripting.executeScript(
+      {
+        target: {
+          tabId: result[0].id
+        },
+        func: progressBar,
+        args: [Data.ProgressBarColor]
+      }
+    ).then(() => { console.log('script progressBar injected') });
   }
 })
 
@@ -45,7 +61,7 @@ function fullscreen() {
   }, 100); //check every 100ms
 }
 
-function SliderFunction(value) {
+function SliderFunction(InputValude) {
   function styled() {
     var newDivStyle = document.createElement('style');
     newDivStyle.innerHTML = `
@@ -54,9 +70,9 @@ function SliderFunction(value) {
       }
 
       #img-container {
-        background: url("${value}") 0% 0% / contain no-repeat;
+        background: url("${InputValude}") 0% 0% / contain no-repeat;
         top: calc(var(--size)*-1.2) !important;
-        left: calc(var(--size)/2*-1) !important;  
+        left: calc(var(--size)/2*-1) !important;
         width: var(--size);
         height: var(--size); 
         position: relative;
@@ -67,6 +83,7 @@ function SliderFunction(value) {
 
   if (!(document.querySelector("#img-container") != null)) {
     const currentDiv = document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-progress-bar-container > div.ytp-progress-bar > div.ytp-scrubber-container")
+
     // create a new div element
     const newDiv = document.createElement("div");
     newDiv.id = "img-container";
@@ -79,4 +96,8 @@ function SliderFunction(value) {
   else {
     return;
   }
+}
+
+function progressBar(ProgressBarColor) {
+  document.querySelector(':root').style.setProperty('--Progress-Bar-Color', ProgressBarColor);
 }

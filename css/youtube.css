@@ -3,6 +3,12 @@
   /* header */
   --yt-spec-menu-background: #06060694 !important;
   --yt-spec-raised-background: #06060694 !important;
+  /**/
+  --Progress-Bar-Color: #ff0000;
+}
+
+html[dark], [dark]{
+  --yt-spec-base-background: transparent !important;
 }
 
 yt-dropdown-menu[modern-dialogs] #menu.yt-dropdown-menu {
@@ -90,4 +96,15 @@ ytd-searchbox[desktop-searchbar-style=rounded_corner_autofocus] #container.ytd-s
 .ytp-scrubber-button
 {
 /*  display: none !important;*/
+}
+
+/**/
+
+.ytd-masthead[darker-dark-theme] #background.ytd-masthead {
+  background: transparent !important;
+}
+
+.ytp-swatch-background-color
+{
+  background-color: var(--Progress-Bar-Color) !important;
 }
