@@ -1,13 +1,20 @@
-var Data = {
-  InputValude: "Vide", // https://media.tenor.com/WtDDOBNCKB8AAAAi/sonic-running.gif
-  ProgressBarColor: "vide" // red
-}
+var Data = {}
+
+chrome.storage.local.get(["key"]).then((result) => {
+  Data = {
+    InputValude: JSON.parse(result.key).InputValude, // https://media.tenor.com/WtDDOBNCKB8AAAAi/sonic-running.gif
+    ProgressBarColor: JSON.parse(result.key).ProgressBarColor // red
+  }
+});
 
 chrome.runtime.onMessage.addListener(function (response, sender, sendResponse) {
   Data = {
     InputValude: response.temp1,
     ProgressBarColor: response.temp2
   }
+  chrome.storage.local.set({ key: JSON.stringify(Data) }).then(() => {
+    console.log("save success");
+  });
   console.log(response);
   return Data
 }) // On reçois le slider définis dans la popup
@@ -99,6 +106,9 @@ function SliderFunction(InputValude) {
 }
 
 function progressBar(ProgressBarColor) {
-    let color = ProgressBarColor
-  document.querySelector(':root').style.setProperty('--Progress-Bar-Color', ProgressBarColor);
+  let color = ProgressBarColor
+  chrome.storage.local.get(["key"]).then((result) => {
+    document.querySelector(':root').style.setProperty('--Progress-Bar-Color', color);
+    JSON.parse(result.key);
+  });
 }

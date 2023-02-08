@@ -10,6 +10,7 @@ window.onload = () => {
     PopupData = JSON.parse(localStorage.getItem('MyKey-Data'))
     InputValude.value = PopupData.InputValude
     ProgressBarColor.value = PopupData.ProgressBarColor
+    
 } // SetPopup to Defaults settings
 
 console.log(JSON.parse(localStorage.getItem('MyKey-Data')));
