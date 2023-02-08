@@ -1,7 +1,7 @@
 # Pimpe your Youtube!
 
 ## new functionality 
-now you con change the color of the progress bar and and a little gif
+now you can change the color of the progress bar and and a little gif
 
  From this :
  
