@@ -18,6 +18,7 @@
   },
   "permissions": [
     "scripting",
+    "storage",
     "tabs"
   ],
   "content_scripts": [
