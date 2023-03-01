@@ -43,6 +43,10 @@ ytd-app:not([use-content-visibility]) #page-manager.ytd-app {
   margin-top: 0px;
 }
 
+.ytp-scrubber-container {
+pointer-events: none; !important
+}
+
 ytd-browse[page-subtype=playlist][amsterdam],
 ytd-page-manager>*.ytd-page-manager {
   margin-top: 50px;
