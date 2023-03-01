@@ -44,7 +44,7 @@ ytd-app:not([use-content-visibility]) #page-manager.ytd-app {
 }
 
 .ytp-scrubber-container {
-pointer-events: none; !important
+pointer-events: none !important;
 }
 
 ytd-browse[page-subtype=playlist][amsterdam],
