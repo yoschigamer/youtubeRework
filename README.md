@@ -7,7 +7,7 @@ now you can change the color of the progress bar and and a little gif
 
 
 
-![bctx.png](https://postimg.cc/gr2Ccgvm)
+[![bctx.png](https://i.postimg.cc/zDC8jMvb/bctx.png)](https://postimg.cc/gr2Ccgvm)
 
 # Oraganization
 
