@@ -4,6 +4,7 @@
 now you can change the color of the progress bar and and a little gif
 
 ![enter image description here](https://zupimages.net/up/23/06/voro.png)
+![enter image description here](https://zupimages.net/up/23/05/bctx.png)
 
  From this :
  
