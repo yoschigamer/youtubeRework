@@ -7,7 +7,7 @@ now you can change the color of the progress bar and and a little gif
 
  From this :
  
-![enter image description here](https://zupimages.net/up/23/05/tmbq.png)
+[![HkSd5yG.md.png](https://iili.io/HkSd5yG.md.png)](https://freeimage.host/i/HkSd5yG)
 To this :
 
 ![Hk8bogf.md.png](https://freeimage.host/i/Hk8bogf)
