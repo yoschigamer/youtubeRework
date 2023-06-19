@@ -58,6 +58,7 @@ function fullscreen() {
   let fullscreen = document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-right-controls > button.ytp-fullscreen-button.ytp-button")
   var oldTitle = fullscreen.title;
 
+  fullscreen.style.display = "none";
   window.setInterval(function () {
     if (fullscreen.title !== oldTitle) {
       (fullscreen.title == 'Plein écran (f)')
