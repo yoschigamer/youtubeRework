@@ -1,4 +1,4 @@
-# Pimpe your Youtube! (DEAD BY YOUTUBE UPDATE)
+# Pimpe your Youtube! (NOT UPDATE)
 
 ## new functionality 
 - moderne scrollbar
